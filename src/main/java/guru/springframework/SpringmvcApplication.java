@@ -9,7 +9,8 @@ public class SpringmvcApplication {
 
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(SpringmvcApplication.class, args);
-
+        HelloWorld helloworld = (HelloWorld) ctx.getBean("helloWorld");
+        helloworld.sayHello();
 //        for (String name : ctx.getBeanDefinitionNames()){
 //            System.out.println(name);
 //        }
